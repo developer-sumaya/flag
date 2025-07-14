@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangladesh Flag</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+.flag {
+  width: 320px;
+  height: 200px;
+  background-color: #006a4e;
+  position: relative;
+  border: 5px solid #333;
+  transition: transform 0.6s;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #f42a41;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.animated {
+  transform: scale(1.1) rotate(2deg);
+}
+
+  </style>
+</head>
+<body>
+  <div class="flag" id="flag">
+    <div class="circle"></div>
+  </div>
+
+  <button onclick="toggleAnimation()">Toggle Animation</button>
+
+  <script>
+    function toggleAnimation() {
+  const flag = document.getElementById("flag");
+  flag.classList.toggle("animated");
+}
+
+  </script>
+</body>
+</html>
